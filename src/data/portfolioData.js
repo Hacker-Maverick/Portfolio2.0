@@ -44,7 +44,7 @@ export const portfolioData = {
       tech: ["Node.js", "Express", "MongoDB", "AWS S3", "Razorpay", "Cloudinary", "Passport.js"],
       category: "SaaS",
       links: {
-        live: "#",
+        live: "https://album-frontend-orpin.vercel.app/",
         github: "https://github.com/Hacker-maverick/Album_Backend"
       }
     },
@@ -154,6 +154,7 @@ export const portfolioData = {
       tech: ["React", "Framer Motion", "Lucide Icons", "Vite"],
       category: "Frontend",
       links: {
+        live: "https://portfolio2-0-mocha-delta.vercel.app/",
         github: "https://github.com/Hacker-maverick/Portfolio2.0"
       }
     }
