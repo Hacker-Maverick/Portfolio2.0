@@ -1,0 +1,131 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(3, 0, 20, 0.8);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 2px solid var(--glass-border);
+  height: 70px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.logo span {
+  color: var(--accent-color);
+  font-weight: 300;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li a {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  padding: 0.5rem 0;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--text-main);
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-socials {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--text-dim);
+}
+
+.nav-socials a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color));
+  transform-origin: left;
+  z-index: 1001;
+}
+
+@media (max-width: 992px) {
+  .nav-links, .nav-socials {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(3, 0, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid var(--glass-border);
+    padding: 2rem;
+  }
+  
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .mobile-menu ul li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
