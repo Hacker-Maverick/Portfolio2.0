@@ -169,7 +169,7 @@ export const portfolioData = {
     "Implemented reminder logic with overdue and same-day highlights to prevent missed follow-ups and improve application management."
   ],
   "tech": ["Node.js", "Express.js", "MongoDB", "EJS", "Brevo"],
-  "category": "Full Stack",
+  "category": "Full-Stack",
   "links": {
     "live": "https://offertrail.onrender.com",
     "github": "https://github.com/Hacker-maverick/offertrail"
