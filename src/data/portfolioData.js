@@ -157,7 +157,24 @@ export const portfolioData = {
         live: "https://portfolio2-0-mocha-delta.vercel.app/",
         github: "https://github.com/Hacker-maverick/Portfolio2.0"
       }
-    }
+    },
+    {
+  "id": 10,
+  "title": "OfferTrail",
+  "subtitle": "Smart Job Application Tracker",
+  "description": "A full-stack web application designed to help students and job seekers track applications, manage resume versions, and never miss follow-ups with an organized and analytical workflow.",
+  "details": [
+    "Built a complete authentication system with session-based login, password reset via email, and secure bcrypt hashing.",
+    "Designed a structured application tracking system with resume version tracking, referral management, and on-campus/off-campus categorization.",
+    "Implemented reminder logic with overdue and same-day highlights to prevent missed follow-ups and improve application management."
+  ],
+  "tech": ["Node.js", "Express.js", "MongoDB", "EJS", "Brevo"],
+  "category": "Full Stack",
+  "links": {
+    "live": "https://offertrail.onrender.com",
+    "github": "https://github.com/Hacker-maverick/offertrail"
+  }
+}
   ],
   skills: {
     languages: ["C", "C++", "JavaScript (ES6+)", "HTML5", "CSS3"],
