@@ -64,7 +64,62 @@ export const portfolioData = {
       }
     },
     {
-      id: 4,
+  id: 4,
+  title: "LendFlow",
+  subtitle: "Enterprise Loan Management Platform",
+  description: "Architected and deployed a production-grade lending platform streamlining borrower onboarding, loan approval workflows, document verification, repayment management, and operational analytics through a role-based multi-user system.",
+  details: [
+    "Engineered JWT-based authentication and fine-grained RBAC supporting Admin, Loan Officer, and Collection Agent permissions.",
+    "Designed hierarchical role-based access controls ensuring users could access only authorized modules, actions, and borrower records.",
+    "Built borrower profiling, loan origination, document management, repayment tracking, dashboard analytics, and cloud-based file storage integration."
+  ],
+  tech: [
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Cloudinary",
+    "REST APIs"
+  ],
+  category: "Full-stack",
+  links: {
+    github: "https://github.com/Hacker-Maverick/Loan-management-System",
+    live:"https://loan-management-system-one-livid.vercel.app/"
+  }
+},
+    {
+  id: 5,
+  title: "Personal Finance Manager",
+  subtitle: "Spring Boot Financial Tracking & Analytics API",
+  description:
+    "A secure RESTful backend application that enables users to manage financial transactions, custom categories, savings goals, and generate financial reports with session-based authentication.",
+  details: [
+    "Implemented user authentication and session management using Spring Security with secure cookie-based sessions.",
+    "Built complete CRUD APIs for transactions, categories, and savings goals following layered architecture (Controller → Service → Repository).",
+    "Implemented monthly and yearly financial analytics including income, expense, and savings reports.",
+    "Integrated Spring Data JPA and Hibernate for database operations with input validation and global exception handling.",
+  ],
+  tech: [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "Spring Data JPA",
+    "Hibernate",
+    "MySQL",
+    "JUnit",
+    "Mockito",
+    "Maven"
+  ],
+  category: "Backend",
+  links: {
+    live: "https://loan-management-system-26hd.onrender.com",
+    github: "https://github.com/Hacker-Maverick/finance_manager"
+  }
+},
+    {
+      id: 6,
       title: "Chitchat",
       subtitle: "Privacy-Focused Group Chat",
       description: "A group chat application with a unique 'nuke' feature that deletes the entire chat history on a wrong password attempt to ensure absolute privacy.",
@@ -81,7 +136,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 5,
+      id: 7,
       title: "Quitsmoke",
       subtitle: "Collaborative Habit Tracker",
       description: "A platform designed to help users quit smoking by tracking their progress and comparing metrics with others in a collaborative environment.",
@@ -96,7 +151,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 6,
+      id: 8,
       title: "Hospital Management System",
       subtitle: "Bed Allocation & Queue Backend",
       description: "A robust backend system for hospitals to manage bed allocations, appointment bookings, and a live queue system for patients.",
@@ -111,7 +166,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 7,
+      id: 9,
       title: "Tank Game",
       subtitle: "Online Multiplayer Combat",
       description: "A real-time multiplayer tank game where players can create/join rooms and battle in a seamless, interactive environment.",
@@ -126,7 +181,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 8,
+      id: 10,
       title: "Tile Puzzle Game",
       subtitle: "Interactive Grid-Based Challenge",
       description: "A full-stack puzzle application where images are sliced into tiles and scrambled, requiring users to solve them by swiping to restore the original image.",
@@ -142,7 +197,7 @@ export const portfolioData = {
       }
     },
     {
-      id: 9,
+      id: 11,
       title: "Developer Portfolio 2.0",
       subtitle: "Premium Professional Showroom",
       description: "A high-performance, modern developer portfolio featuring glassmorphism, advanced animations, and smooth section reveals.",
@@ -159,7 +214,7 @@ export const portfolioData = {
       }
     },
     {
-  "id": 10,
+  "id": 12,
   "title": "OfferTrail",
   "subtitle": "Smart Job Application Tracker",
   "description": "A full-stack web application designed to help students and job seekers track applications, manage resume versions, and never miss follow-ups with an organized and analytical workflow.",
