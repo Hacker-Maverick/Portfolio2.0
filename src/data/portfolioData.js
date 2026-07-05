@@ -9,7 +9,7 @@ export const portfolioData = {
     institution: "Indian Institute of Information Technology, Bhopal (IIIT Bhopal)",
     degree: "B.Tech in Computer Science and Engineering",
     duration: "Sep 2023 — May 2027",
-    cgpa: "7.76/10",
+    cgpa: "7.78/10",
     coursework: ["Data Structures & Algorithms", "DBMS", "OOP", "Computer Networks", "Operating Systems", "Software Engineering"]
   },
   projects: [
