@@ -4,7 +4,7 @@ export const portfolioData = {
   email: "bigsagar18@gmail.com",
   phone: "+91 9693994971",
   location: "India",
-  about: "I am a full stack developer focused on building production-grade systems. I enjoy designing scalable backend architectures, deploying cloud infrastructure, and solving real-world problems. I actively build SaaS products and developer tools. Currently pursuing B.Tech in Computer Science at IIIT Bhopal.",
+  about: "Full-stack developer focused on building production systems. I design backend architectures, deploy cloud infrastructure, and ship real products, with a strong side interest in web application security. Currently pursuing B.Tech in Computer Science at IIIT Bhopal.",
   education: {
     institution: "Indian Institute of Information Technology, Bhopal (IIIT Bhopal)",
     degree: "B.Tech in Computer Science and Engineering",
@@ -17,12 +17,12 @@ export const portfolioData = {
       id: 1,
       title: "CampusTales",
       subtitle: "College-Centric Digital Platform",
-      description: "Production platform actively used by 10+ registered clubs and 600+ students at IIIT Bhopal, processing 300+ team registrations for inter-college events with zero downtime.",
+      description: "Production platform used by 600+ students and 10+ clubs at IIIT Bhopal. Handles club and event management and has processed 300+ team registrations for inter-college events.",
       details: [
-        "Architected backend with RBAC, audit logging, rate limiting, and centralized error handling.",
-        "Integrated Brevo and Resend for transactional emails; deployed on Vercel and Render.",
+        "Built a role-based backend (student, club-admin, institute-admin) with audit logging, per-route rate limiting, and centralized error handling.",
         "Implemented JWT + OAuth 2.0 authentication with full session management.",
-        "Built a dynamic certificate generation system for automated event participation certificates."
+        "Built an automated certificate-generation system for event participation.",
+        "Integrated transactional email (Resend/Brevo) and deployed on Vercel and Render with IAM-scoped AWS S3 storage."
       ],
       tech: ["Node.js", "Express", "React", "MongoDB", "AWS", "JWT", "OAuth"],
       category: "SaaS",
@@ -34,12 +34,12 @@ export const portfolioData = {
     {
       id: 2,
       title: "Photo Album Platform",
-      subtitle: "Large-Scale Full Stack Application",
-      description: "Full stack SaaS for managing event photos with secure payments and CDN delivery. Engineered a 10,000+ LOC production-ready application.",
+      subtitle: "Full-Stack Photo Platform with Payments & CDN",
+      description: "Full-stack application for managing and selling event photos, with online payments, secure cloud file storage, and CDN-based image delivery.",
       details: [
-        "Integrated Razorpay for full payment lifecycle management.",
-        "Used AWS S3 with signed URLs and Cloudinary for CDN-optimized image delivery.",
-        "Implemented dual-layer auth via JWT + Passport.js (local & OAuth)."
+        "Built a modular Express backend (controllers/services/middleware) with Razorpay webhook signature verification, idempotent payment tracking, and failure recovery.",
+        "Configured AWS S3 with IAM-scoped access and pre-signed URLs; used Cloudinary for CDN image delivery.",
+        "Implemented dual-layer authentication via JWT + Passport.js (local and OAuth)."
       ],
       tech: ["Node.js", "Express", "MongoDB", "AWS S3", "Razorpay", "Cloudinary", "Passport.js"],
       category: "SaaS",
@@ -52,86 +52,65 @@ export const portfolioData = {
       id: 3,
       title: "RootRush CTF",
       subtitle: "Web Security CTF (Designed & Hosted)",
-      description: "Designed, built, and hosted RootRush, a web-focused CTF competition drawing 300+ participants across 5 progressively difficult real-world exploitation challenges.",
+      description: "Designed, built, and hosted RootRush, a web-focused Capture The Flag competition with 300+ participants and 5 progressively harder real-world exploitation challenges.",
       details: [
-        "Challenges spanned client-side logic exploitation, Reflected XSS, and JWT tampering.",
-        "Engineered a chained IDOR challenge and an advanced blind SQLi with WAF-like filtering."
+        "Authored challenges covering Reflected XSS with filter bypass, JWT tampering via algorithm confusion, and a chained two-step IDOR auth bypass.",
+        "Built a blind SQL-injection challenge with WAF-style filtering, plus the full backend: flag-validation API, live scoreboard, and session handling for 300+ concurrent users."
       ],
-      tech: ["Web Exploitation", "CTF Engineering", "Challenge Design", "Linux"],
+      tech: ["Web Exploitation", "CTF Engineering", "Challenge Design", "Node.js", "Linux"],
       category: "Security",
       links: {
         github: "https://github.com/Hacker-maverick/CTF"
       }
     },
     {
-  id: 4,
-  title: "LendFlow",
-  subtitle: "Enterprise Loan Management Platform",
-  description: "Architected and deployed a production-grade lending platform streamlining borrower onboarding, loan approval workflows, document verification, repayment management, and operational analytics through a role-based multi-user system.",
-  details: [
-    "Engineered JWT-based authentication and fine-grained RBAC supporting Admin, Loan Officer, and Collection Agent permissions.",
-    "Designed hierarchical role-based access controls ensuring users could access only authorized modules, actions, and borrower records.",
-    "Built borrower profiling, loan origination, document management, repayment tracking, dashboard analytics, and cloud-based file storage integration."
-  ],
-  tech: [
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JWT",
-    "Cloudinary",
-    "REST APIs"
-  ],
-  category: "Full-stack",
-  links: {
-    github: "https://github.com/Hacker-Maverick/Loan-management-System",
-    live:"https://loan-management-system-one-livid.vercel.app/"
-  }
-},
+      id: 4,
+      title: "LendFlow",
+      subtitle: "Loan Management Platform",
+      description: "Production-grade lending platform covering borrower onboarding, the full loan lifecycle, document verification, repayment tracking, and operational analytics through a multi-role access system.",
+      details: [
+        "Implemented JWT authentication and role-based access control across six roles that mirror a real loan pipeline: Admin, Sales, Sanction, Disbursement, Collection, and Borrower.",
+        "Enforced module- and record-level permissions so each role can only reach its authorized actions and borrower data.",
+        "Built borrower profiling, loan origination, document management (Multer + Cloudinary), repayment tracking, and dashboard analytics, with Zod-based request validation. Fully typed TypeScript backend and Next.js frontend."
+      ],
+      tech: ["Next.js", "TypeScript", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Zod", "REST APIs"],
+      category: "Full-stack",
+      links: {
+        github: "https://github.com/Hacker-Maverick/Loan-management-System",
+        live: "https://loan-management-system-one-livid.vercel.app/"
+      }
+    },
     {
-  id: 5,
-  title: "Personal Finance Manager",
-  subtitle: "Spring Boot Financial Tracking & Analytics API",
-  description:
-    "A secure RESTful backend application that enables users to manage financial transactions, custom categories, savings goals, and generate financial reports with session-based authentication.",
-  details: [
-    "Implemented user authentication and session management using Spring Security with secure cookie-based sessions.",
-    "Built complete CRUD APIs for transactions, categories, and savings goals following layered architecture (Controller → Service → Repository).",
-    "Implemented monthly and yearly financial analytics including income, expense, and savings reports.",
-    "Integrated Spring Data JPA and Hibernate for database operations with input validation and global exception handling.",
-  ],
-  tech: [
-    "Java",
-    "Spring Boot",
-    "Spring Security",
-    "Spring Data JPA",
-    "Hibernate",
-    "MySQL",
-    "JUnit",
-    "Mockito",
-    "Maven"
-  ],
-  category: "Backend",
-  links: {
-    live: "https://loan-management-system-26hd.onrender.com",
-    github: "https://github.com/Hacker-Maverick/finance_manager"
-  }
-},
+      id: 5,
+      title: "Personal Finance Manager",
+      subtitle: "Spring Boot Financial Tracking & Analytics API",
+      description: "Secure REST API for managing financial transactions, custom categories, and savings goals, with monthly and yearly reporting and session-based authentication.",
+      details: [
+        "Implemented authentication and session management with Spring Security using cookie-based sessions.",
+        "Built full CRUD APIs for transactions, categories, and savings goals following a layered architecture (Controller → Service → Repository) with DTOs.",
+        "Implemented monthly and yearly analytics for income, expense, and savings.",
+        "Used Spring Data JPA and Hibernate over PostgreSQL, with request validation and a global exception handler."
+      ],
+      tech: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "PostgreSQL", "JUnit", "Maven"],
+      category: "Backend",
+      links: {
+        live: "https://loan-management-system-26hd.onrender.com",
+        github: "https://github.com/Hacker-Maverick/finance_manager"
+      }
+    },
     {
       id: 6,
       title: "Chitchat",
       subtitle: "Privacy-Focused Group Chat",
-      description: "A group chat application with a unique 'nuke' feature that deletes the entire chat history on a wrong password attempt to ensure absolute privacy.",
+      description: "A real-time group chat app with a deliberate 'nuke' feature: a wrong password wipes the chat history, trading availability for confidentiality by design.",
       details: [
-        "Implemented real-time messaging using Socket.io.",
-        "Integrated a security trigger to wipe MongoDB collections on unauthorized access attempts.",
-        "Server-side rendering for fast initial load and SEO."
+        "Implemented real-time messaging with Socket.io.",
+        "Built a security trigger that clears MongoDB collections and disconnects all active sessions on unauthorized access."
       ],
       tech: ["Node.js", "Express", "MongoDB", "Socket.io", "EJS"],
       category: "Full-stack",
       links: {
-        live:"https://chitchat-ng5b.onrender.com",
+        live: "https://chitchat-ng5b.onrender.com",
         github: "https://github.com/Hacker-maverick/chitchat"
       }
     },
@@ -139,12 +118,12 @@ export const portfolioData = {
       id: 7,
       title: "Quitsmoke",
       subtitle: "Collaborative Habit Tracker",
-      description: "A platform designed to help users quit smoking by tracking their progress and comparing metrics with others in a collaborative environment.",
+      description: "A habit-tracking app that helps users quit smoking by logging progress and comparing it against others through a shared leaderboard.",
       details: [
-        "Designed a social comparison engine to motivate users.",
-        "Persistent tracking with MongoDB to visualize long-term health improvements."
+        "Built a leaderboard that ranks users to add social motivation.",
+        "Persisted long-term progress in MongoDB and visualized health improvements with Chart.js."
       ],
-      tech: ["Node.js", "Express", "MongoDB", "EJS"],
+      tech: ["Node.js", "Express", "MongoDB", "EJS", "Chart.js"],
       category: "Full-stack",
       links: {
         github: "https://github.com/Hacker-maverick/quitsmoke"
@@ -153,13 +132,13 @@ export const portfolioData = {
     {
       id: 8,
       title: "Hospital Management System",
-      subtitle: "Bed Allocation & Queue Backend",
-      description: "A robust backend system for hospitals to manage bed allocations, appointment bookings, and a live queue system for patients.",
+      subtitle: "Appointments, Queue & Hospital Search Backend",
+      description: "Backend for a hospital-patient system covering hospital and patient accounts, doctor and hospital search, appointment booking, and a live patient queue.",
       details: [
-        "Architected a real-time queue management logic.",
-        "API-only implementation focused on high availability and fast response times."
+        "Built hospital and patient authentication, appointment booking, and a queue-management flow.",
+        "Modeled hospitals, doctors, patients, and queues in MongoDB, with search over hospital and doctor details."
       ],
-      tech: ["Node.js", "Express"],
+      tech: ["Node.js", "Express", "MongoDB"],
       category: "Backend",
       links: {
         github: "https://github.com/Hacker-maverick/Hospital_Management_SIH"
@@ -169,10 +148,10 @@ export const portfolioData = {
       id: 9,
       title: "Tank Game",
       subtitle: "Online Multiplayer Combat",
-      description: "A real-time multiplayer tank game where players can create/join rooms and battle in a seamless, interactive environment.",
+      description: "A real-time multiplayer tank game where players create or join rooms and battle in a shared session.",
       details: [
-        "Real-time rendering of player positions and projectiles using Socket.io.",
-        "Dynamic room creation and management for isolated gameplay sessions."
+        "Synced player positions and projectiles in real time with Socket.io.",
+        "Built dynamic room creation with isolated per-room game state."
       ],
       tech: ["Node.js", "Express", "Socket.io", "HTML5", "CSS3", "JavaScript"],
       category: "Full-stack",
@@ -184,11 +163,10 @@ export const portfolioData = {
       id: 10,
       title: "Tile Puzzle Game",
       subtitle: "Interactive Grid-Based Challenge",
-      description: "A full-stack puzzle application where images are sliced into tiles and scrambled, requiring users to solve them by swiping to restore the original image.",
+      description: "A puzzle game that slices an image into tiles and scrambles them; players swipe to restore the original image.",
       details: [
-        "Dynamic image processing and scrambling logic.",
-        "Smooth swipe interactions for an engaging user experience.",
-        "Server-side rendering for quick loading and reliability."
+        "Implemented image slicing and scrambling logic.",
+        "Built smooth swipe interactions for solving the grid."
       ],
       tech: ["Node.js", "Express", "EJS", "JavaScript"],
       category: "Full-stack",
@@ -199,12 +177,12 @@ export const portfolioData = {
     {
       id: 11,
       title: "Developer Portfolio 2.0",
-      subtitle: "Premium Professional Showroom",
-      description: "A high-performance, modern developer portfolio featuring glassmorphism, advanced animations, and smooth section reveals.",
+      subtitle: "Personal Portfolio Site",
+      description: "A modern developer portfolio built with React and Vite, featuring smooth section reveals and a centralized data layer for easy content updates.",
       details: [
-        "Architected with React and Vite for blazing-fast performance.",
-        "Sophisticated animations and micro-interactions powered by Framer Motion.",
-        "Fully responsive design system with a centralized data management architecture for easy content updates."
+        "Built with React and Vite.",
+        "Added animations and micro-interactions with Framer Motion.",
+        "Used a fully responsive layout driven by a single centralized data file for content."
       ],
       tech: ["React", "Framer Motion", "Lucide Icons", "Vite"],
       category: "Frontend",
@@ -214,28 +192,28 @@ export const portfolioData = {
       }
     },
     {
-  "id": 12,
-  "title": "OfferTrail",
-  "subtitle": "Smart Job Application Tracker",
-  "description": "A full-stack web application designed to help students and job seekers track applications, manage resume versions, and never miss follow-ups with an organized and analytical workflow.",
-  "details": [
-    "Built a complete authentication system with session-based login, password reset via email, and secure bcrypt hashing.",
-    "Designed a structured application tracking system with resume version tracking, referral management, and on-campus/off-campus categorization.",
-    "Implemented reminder logic with overdue and same-day highlights to prevent missed follow-ups and improve application management."
-  ],
-  "tech": ["Node.js", "Express.js", "MongoDB", "EJS", "Brevo"],
-  "category": "Full-stack",
-  "links": {
-    "live": "https://offertrail.onrender.com",
-    "github": "https://github.com/Hacker-maverick/offertrail"
-  }
-}
+      id: 12,
+      title: "OfferTrail",
+      subtitle: "Smart Job Application Tracker",
+      description: "A full-stack app for job seekers to track applications, manage resume versions, and stay on top of follow-ups.",
+      details: [
+        "Built session-based authentication with bcrypt hashing and email-based password reset.",
+        "Built application tracking with resume version history, referral management, and on-campus/off-campus categorization.",
+        "Added reminder logic with overdue and same-day highlights to prevent missed follow-ups."
+      ],
+      tech: ["Node.js", "Express.js", "MongoDB", "EJS", "Brevo"],
+      category: "Full-stack",
+      links: {
+        live: "https://offertrail.onrender.com",
+        github: "https://github.com/Hacker-maverick/offertrail"
+      }
+    }
   ],
   skills: {
-    languages: ["C", "C++", "JavaScript (ES6+)", "HTML5", "CSS3"],
-    backend: ["Node.js", "Express", "REST APIs", "JWT", "Passport.js"],
-    frontend: ["React.js", "EJS", "Tailwind CSS", "Framer Motion"],
-    database: ["MongoDB", "SQL", "MongoDB Atlas"],
+    languages: ["C", "C++", "JavaScript (ES6+)", "Java", "HTML5", "CSS3"],
+    backend: ["Node.js", "Express", "REST APIs", "JWT", "Passport.js", "Spring Boot"],
+    frontend: ["React.js", "Next.js", "EJS", "Tailwind CSS", "Framer Motion"],
+    database: ["MongoDB", "MongoDB Atlas", "PostgreSQL", "MySQL", "SQL"],
     cloud: ["AWS (S3, IAM)", "Cloudinary", "Vercel", "Render", "Railway"],
     security: ["Burp Suite", "Nmap", "Metasploit", "Hydra", "Wireshark", "Wifite", "TCP/IP", "Web Exploitation", "Linux"]
   },
@@ -244,20 +222,20 @@ export const portfolioData = {
       role: "Co-Coordinator & Founding Member",
       company: "Xploit Club (Cybersecurity Club), IIIT Bhopal",
       duration: "2025 — Present",
-      description: "Co-founded IIIT Bhopal's cybersecurity club; organized RootRush CTF (300+ participants), managing full challenge deployment, infrastructure, and real-time event operations. Led cross-campus collaborations with IIIT Allahabad, Lucknow, Nagpur, Kota, and IIT Indore."
+      description: "Co-founded IIIT Bhopal's cybersecurity club; organized RootRush CTF (300+ participants), managing challenge deployment, infrastructure, and live event operations. Led cross-campus collaborations with IIIT Allahabad, Lucknow, Nagpur, Kota, and IIT Indore."
     },
     {
       role: "Founder & Developer",
       company: "CampusTales",
-      duration: "2024 — Present",
-      description: "Built and deployed a production college platform currently serving 600+ users and 10+ clubs."
+      duration: "Jan 2026 — Present",
+      description: "Built and deployed a production college platform serving 600+ users and 10+ clubs."
     }
   ],
   achievements: [
     {
       title: "AIR 29 — National Entrepreneurship Olympiad",
       org: "IIT Bombay (2021)",
-      description: "Ranked 29th nationally in a competitive national-level business challenge."
+      description: "Ranked 29th nationally in a national-level business challenge."
     },
     {
       title: "AIR 87 — CTF by IIIT Nagpur",
@@ -267,12 +245,12 @@ export const portfolioData = {
     {
       title: "Smart India Hackathon (SIH) Qualifier",
       org: "Government of India",
-      description: "Qualified internal selection rounds in 2023, 2024, and 2025 — three consecutive years."
+      description: "Cleared internal selection rounds in 2023, 2024, and 2025 — three consecutive years."
     },
     {
       title: "Algo-University Coding Contest",
       org: "Algo-University",
-      description: "Ranked in the Top 4000 out of 20,000+ participants."
+      description: "Ranked in the top 4000 out of 20,000+ participants."
     }
   ],
   socials: {
